@@ -3,8 +3,8 @@
 
 class Point2D
 {
-    public $x = 0.0;
-    public $y = 0.0;
+    public $x;
+    public $y;
 
     public function __construct($x, $y)
     {
@@ -46,15 +46,17 @@ class Point2D
 
     public function setXY($x, $y)
     {
+//        $this->x = $x;
+//        $this->y = $y;
     }
 
     public function getXY()
     {
-        return array($this->x,$this->y);
+        return $this->x . " ," . $this->y;
     }
 
     public function toString()
     {
-        return 'so [' . $this->getXY().']';
+        return 'so [' . $this->getXY() . ']';
     }
 }

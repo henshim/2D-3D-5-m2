@@ -8,9 +8,9 @@ class Point3D extends Point2D
 
     public function __construct($x, $y, $z)
     {
-        $this->x=$x;
-        $this->y=$y;
-        //parent::__construct($x, $y);
+//        $this->x=$x;
+//        $this->y=$y;
+        parent::__construct($x, $y);
         $this->z = $z;
     }
 
@@ -32,19 +32,19 @@ class Point3D extends Point2D
 
     public function setXYZ($x, $y, $z)
     {
-        /* $this->x=$x;
-         $this->y=$y;
-         $this->z=$z;*/
+        /*$this->x=$x;
+        $this->y=$y;
+        $this->z=$z;*/
     }
 
     public function getXYZ()
     {
-        return array($this->x, $this->y, $this->z);
+        return $this->x . ", " . $this->y . ", " . $this->z;
     }
 
     public function toString()
     {
-        return $this->getXYZ();
+        return 'day so' . '[ ' . $this->getXYZ() . ' ]';
     }
 
 }
